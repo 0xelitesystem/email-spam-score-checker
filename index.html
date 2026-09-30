@@ -42,7 +42,7 @@
   --warn: #fbbf24;
   --warn-soft: #5b3d10;
   --bad: #f87171;
-  --bad-soft: #5a1c1c;
+  --bad-soft: #561a1a;
   --link: #60a5fa;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -364,7 +364,7 @@ function check() {
 ['from', 'subject', 'body'].forEach(id => document.getElementById(id).addEventListener('input', check));
 document.getElementById('theme-toggle').addEventListener('click', () => {
   const c = document.documentElement.getAttribute('data-theme');
-  document.documentElement.setAttribute('data-theme', c === 'dark' ? '' : 'dark');
+  document.documentElement.setAttribute('data-theme', c === 'dark' ? 'light' : 'dark');
 });
 
 check();
