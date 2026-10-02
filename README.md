@@ -56,9 +56,30 @@ That service requires you to actually send the email to a test address, then it 
 
 Use both. This one first, mail-tester for the final send.
 
+## Use
+
+1. Paste the subject line, the from address and the body (plain text or HTML).
+2. Read the total score and the verdict line (likely to deliver, risky, or very likely to land in spam). The score updates as you type.
+3. Check which rules fired and their point weights, then edit the copy and watch the score change.
+
+## Why this exists
+
+Content problems are the cheapest spam-filter issue to fix, and you should not have to send a real email to find them. This checks the content in a single HTML file with no upload and no tracking, under the MIT license.
+
 ## Privacy
 
 Nothing transmitted. No analytics, no fonts, no external scripts. The HTML file is self-contained. View source to verify.
+
+If you use the theme toggle, your light or dark choice is saved in your browser's localStorage under the key `theme`. Nothing you paste or type is stored.
+
+## Run locally
+
+```
+git clone https://github.com/0xelitesystem/email-spam-score-checker
+cd email-spam-score-checker
+```
+
+Open `index.html` in a browser. Or serve the folder with `python -m http.server` and visit http://localhost:8000.
 
 ## Build
 
